@@ -114,22 +114,27 @@ public class Stock {
         }
         return stock[cheapestItem];
     }
-
-    public void sortArray() {
-        stockComparator test = new stockComparator();
-        Arrays.sort(this.stock, test);
+    
+    public Item[] getArray() {
+        return this.stock;
     }
+    
+    
+    
+//    public void sortArray(){
+//        Arrays.sort(this.stock, new ComparatorAscendingID());
+//    }
 
-    public void removeDuplicates() {
-        for (int i = 0; i < this.stock.length; i++) {
-            if (i <= this.stock.length + 1) {
-                if (stock[i] != null && stock[i + 1] != null) {
-                    if (stock[i].equals(stock[i + 1])) {
-                        System.out.println("FOUND");
-                        System.out.println(stock[i]);
-                    }
-                }
-            }
-        }
-    }
+//    public void removeDuplicates() {
+//        for (int i = 0; i < this.stock.length; i++) {
+//            if (i <= this.stock.length + 1) {
+//                if (stock[i] != null && stock[i + 1] != null) {
+//                    if (stock[i].equals(stock[i + 1])) {
+//                        System.out.println("FOUND");
+//                        System.out.println(stock[i]);
+//                    }
+//                }
+//            }
+//        }
+//    }
 }

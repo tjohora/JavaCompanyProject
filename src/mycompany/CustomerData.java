@@ -17,9 +17,14 @@ public class CustomerData {
     public void addCustomer(Customer c){
         allCustomers.add(c);
     }
-
+    
+    public void removeDuplicate(){
+        //TODO
+    }
+    
     @Override
     public String toString() {
         return "CustomerData{" + "allCustomers=" + allCustomers + '}';
     }
+    
 }

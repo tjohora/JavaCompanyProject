@@ -5,7 +5,7 @@
  */
 package mycompany;
 
-public class Item implements Comparable <Item> {
+public class Item implements Comparable<Item> {
 
     //Each item has these stored.
     private String name;
@@ -103,14 +103,16 @@ public class Item implements Comparable <Item> {
     }
 
     @Override
-    public int compareTo(Item t) {
-        if(this.id < t.getId()) {
-            return -1;
-        }
-        if (this.id > t.getId()) {
-            return 1;
-        }
-        return 0;
+    public int compareTo(Item i) {
+        
+        return this.name.compareToIgnoreCase(i.getName());
+//        if(this.getName().compareToIgnoreCase(i.getName())<0 ) {
+//            return -1;
+//        }
+//        if (this.getName().compareToIgnoreCase(i.getName())>0) {
+//            return 1;
+//        }
+//        return 0;
     }
 
     @Override
@@ -137,5 +139,7 @@ public class Item implements Comparable <Item> {
         }
         return true;
     }
+    
+    
     
 }
